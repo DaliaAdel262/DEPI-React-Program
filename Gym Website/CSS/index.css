@@ -1,0 +1,441 @@
+*{
+    padding:0;
+    margin:0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    color: orange;
+}
+
+.clr{
+    clear:both;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style-type: none;
+}
+
+/***************************************************************************************************/
+
+/*NAV BAR*/
+
+.first_page{
+    background-image: url(../images/final.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 30%;
+    height:100vh;
+    width: 100vw;
+}
+
+.layer{
+    background-color: rgba(0, 0, 0,0.7);
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom: 0;
+    width:100vw;
+    height:100vh;
+}
+
+.nav_bar{
+    position:fixed;
+    z-index:20;
+    background-color: rgba(0,0,0,0.7);
+    margin:auto;
+    width: 100%;
+    height: 110px;
+    position: fixed;
+
+}
+
+.nav_bar .nav_container{
+    float:left;
+    margin-left:50px;
+    margin-right:50px;
+    position: relative;
+    width:90%;
+}
+
+.nav_bar .nav_container .logo{
+    float:left;
+    position: absolute;
+    top:20px;
+    left:20px;
+}
+
+.nav_bar .nav_container .logo h1{
+    font-size: 55px;
+}
+
+.nav_bar .nav_container .logo h1 span,.foot .company a h1 span{
+    background-color: orange;
+    border-radius: 20px;
+    padding:7px 7px;
+    color:white;
+}
+
+.nav_bar .nav_container .links{
+    float:left;
+    margin-top: 40px;
+    margin-left: 420px;
+}
+
+.nav_bar .nav_container .links ul{
+    float:left;
+    top:100px;
+    margin-left:100px;
+}
+
+.nav_bar .nav_container .links ul .link_item{
+    list-style-type: none;
+    float:left;
+    font-size: 30px;
+    margin-right: 50px;
+}
+
+.nav_bar .nav_container .search{
+    float:right;
+}
+
+.nav_bar .nav_container .search .search_item{
+    margin-top: 40px;
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+.nav_bar .nav_container .search .divider::after{
+    content: "";
+    position: absolute;
+    width:2px;
+    height: 40px;
+    background-color: orange;
+    top:35px;
+    right:63px;
+}
+
+/******************************************************************************************************/
+
+/*FIRST SECTION*/
+
+.content{
+    position:relative;
+    background-color: black;
+    width: 100vw;
+}
+
+.content .text1{
+    position:absolute;
+    top:320px;
+    left:200px;
+    font-size: 60px;
+}
+
+.content .text1 h2{
+    font-size: 90px;
+}
+
+.content .text1 h2::after{
+    position: absolute;
+    content:"";
+    width:10px;
+    height: 50px;
+    background-color: orange;
+    bottom: 86px;
+}
+
+.content .text1 h2::before{
+    position: absolute;
+    content:"";
+    width:50px;
+    height: 10px;
+    background-color: orange;
+    bottom:240px;
+    right:770px;
+}
+
+
+.content .text1 p{
+    font-size: 50px;
+}
+
+.content .text1 p::after{
+    position: absolute;
+    content:"";
+    width:50px;
+    height: 10px;
+    background-color: orange;
+    top:140px;
+    right:0;
+}
+
+.content .text1 p::before{
+    position: absolute;
+    content:"";
+    width:10px;
+    height: 50px;
+    background-color: orange;
+    bottom:190px;
+    right:810px;
+}
+
+.content .text1 button{
+    border: none;
+    background-color: orange;
+    color:white;
+    padding: 15px;
+    font-size: 20px;
+}
+
+/******************************************************************************************************/
+
+/*SECOND SECTION*/
+
+.personal_trainers{
+    background-color: black;
+    position: relative;
+    height:90vh;
+    width: 100vw;
+}
+
+.personal_trainers h2{
+    position:absolute;
+    top:70px;
+    left:80px;
+    font-size: 40px;
+    letter-spacing: 0.5px;
+}
+
+.personal_trainers .cards{
+    position:absolute;
+    top:230px;
+    width:80%;
+    left:270px;
+}
+
+.personal_trainers .cards .contacts{
+    background-color: white;
+    width:50px;
+    text-align: center;
+    z-index:16;
+    position: absolute;
+    top:10px;
+    right:50px;
+    padding-bottom: 10px;
+}
+
+.personal_trainers .cards .contacts ul li{
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.personal_trainers .cards .pt{
+    float:left;
+    background-color: orange;
+    padding: 10px 80px;
+    width: 22%;
+    height:350px;
+    position:relative;
+    margin-right: 100px;
+}
+
+.personal_trainers .cards .pt h3{
+    font-size: 25px;
+    padding: 10px;
+    color:white;
+}
+
+.personal_trainers .cards .pt .info{
+    position:absolute;
+    top:210px;
+    left:20px;
+
+}
+
+.personal_trainers .cards .pt p{
+    color:white;
+}
+
+.personal_trainers .cards .pt img{
+    width:230px;
+    height:230px;
+    right:80px;
+    bottom:150px;
+    position: absolute;
+}
+
+/******************************************************************************************************/
+
+/*THIRD SECTION*/
+
+.aboutus{
+    background-image: url(../images/group2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-y: 30%;
+    position: relative;
+    height: 80vh;
+    width: 100vw;
+    margin:auto;
+}
+
+.aboutus .text_box{
+    background-color: white;
+    width:800px;
+    height:250px;
+    position:absolute;
+    z-index:10;
+    top:170px;
+    left:300px;
+    padding:10px;
+    margin: auto;
+}
+
+.aboutus .text_box .text_cont {
+    position:relative;
+}
+
+.aboutus .text_box .text_cont .text{
+    position:absolute;
+    top:20px;
+    left:50px;
+    font-size: 23px;
+}
+
+.aboutus .text_box .text_cont .text li{
+    margin-top: 10px;
+}
+
+.aboutus .pic_cont{
+    background-color: orange;
+    width:400px;
+    height:400px;
+    position:absolute;
+    top:100px;
+    right:160px;
+    z-index: 11;
+}
+
+.aboutus .pic_cont img{
+    width:100px;
+    height: 100px;
+    z-index: 100;
+}
+
+.aboutus .pic_cont .tablet_frame{
+    position:absolute;
+    width: 50%;
+    height: 250px;
+    border-radius: 10px;
+    top:70px;
+    left:90px;
+}
+
+.aboutus .pic_cont .screenshot{
+    position: absolute;
+    width:190px;
+    height: 240px;
+    top:75px;
+    left:95px;
+    border-radius: 10px;
+}
+
+/*******************************************************************************************************/
+
+/*FIXED BUBBLE FOR CONTACT SUPPORT*/
+
+.chat_supp{
+    background-color: white;
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    right:20px;
+    bottom:20px;
+    box-shadow: rgba(0, 0, 0,0.7);
+    border-radius: 50px;
+    z-index:30;
+}
+.chat_supp .bubble{
+    position: relative;
+}
+
+.bubble span{
+    position: absolute;
+    top:5px;
+    right:5px;
+    font-size: 50px;
+}
+
+/*******************************************************************************************************/
+
+/*FOOTER*/
+
+.foot{
+    background-color: rgb(33, 33, 33);
+    color: black;
+    height: 50vh;
+    width: 100vw;
+    position: relative;
+}
+
+.foot .contactus li,.foot .navigate li{
+    margin-top: 10px;
+}
+
+.foot p{
+    line-height: 1.5;
+}
+
+.foot .company{
+    position: absolute;
+    top: 90px;
+    left:110px;
+    width:300px;
+}
+
+.foot ul, .foot input,.foot p{
+    margin-top: 20px;
+}
+
+.foot .navigate{
+    position: absolute;
+    top: 90px;
+    left:560px;
+    width:200px;
+} 
+
+.foot .contactus{
+    position: absolute;
+    top: 90px;
+    right:450px;
+    width:200px;
+}
+
+.foot .subscribe{
+    position: absolute;
+    top: 90px;
+    right:130px;
+    width:200px;
+}
+
+.foot .subscribe input{
+    border:transparent;
+    padding:10px;
+    border-radius: 20px;
+}
+
+.foot .follow{
+    position: absolute;
+    top: 200px;
+    right:130px;
+    width:200px;
+}
+
+.foot .follow ul li{
+    float:left;
+    margin-right: 20px;
+}
