@@ -4,6 +4,7 @@
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     list-style-type: none;
+    text-decoration: none;
 }
 .clr{
     clear:both;
@@ -12,6 +13,10 @@
 ::-webkit-scrollbar{
     display: none;
 }
+
+/************************************************************************************************************/
+
+/* NAV BAR */
 
 
 header{
@@ -27,7 +32,7 @@ header nav{
     height:80px;
     border-radius: 50px;
     position:fixed;
-    right:100px;
+    right:90px;
     top:10px;
     z-index: 20;
 }
@@ -41,62 +46,85 @@ header nav .nav_cont .title{
     top:20px;
     left:100px;
 }
+
+header nav .nav_cont .title h1{
+    font-size: 35px;
+}
 header nav .nav_cont .links{
     float:right;
     position: absolute;
     right:100px;
+    top:5px;
 }
 
 header nav .nav_cont .links ul li{
     float:left; 
-    color: white;
-    margin: 20px 10px;
+    margin: 20px 20px;
     font-size: 20px;
 }
 
+header nav .nav_cont .links ul li a{
+    color: white;
+}
 
 header .text_cont{
     position: absolute;
-    top:300px;
-    left:150px;
+    top:220px;
+    left:130px;
 }
 header .text_cont .text{
     color:white;
     position:relative;
 }
 header .text_cont  .text h2{
-    font-size: 130px;
+    font-size: 120px;
+}
+
+header .text_cont  .text h2::after{
+    content:"";
+    background-color: white;
+    position: absolute;
+    width:630px;
+    height: 5px;
+    top:210px;
+    left:30px;
 }
 header .text_cont  .text p{
-    font-size: 50px;
+    font-size: 40px;
     position: absolute;
-    top:150px;
-    left: 150px;
+    top:140px;
+    left: 25px;
 }
+
+/************************************************************************************************************/
+
+/* SEARCH FORM */
 
 header .search{
     background-color: rgba(225,225,225,0.7);
-    width: 70%;
-    height:200px;
+    width: 80%;
+    height:140px;
     position: absolute;
     bottom: 100px;
     left:100px;
-    border-radius: 10px;
+    border-radius: 30px;
 }
 
 header .search .form_cont{
     position:relative;
     height:200px;
+    width:90%;
+    margin:5px 10px;
 }
 
 header .search .form_cont .input{
     float:left;
-    margin:20px;
+    margin:40px 20px;
 }
 
 
 header .search .form_cont .input input{
-    padding:20px;
+    padding:10px;
     border:transparent;
     background-color: white;
     outline: none;
@@ -117,91 +145,237 @@ header .search .form_cont button{
     border-radius: 50px;
     color:white;
     position:absolute;
-    bottom:0;
+    right:0;
+    top:40px;
 }
 
+/************************************************************************************************************/
 
+/*EXPLORE*/
 
 .explore{
     background-color: white;
-    height:600px;
+    height:700px;
+    text-align: center;
+    position: relative;
+    margin: auto;
+}
+.explore h2, .offer h2, .contact .form_container h2{
+    font-size: 40px;
+    margin:50px 50px;
+    padding:20px;
+    color:rgb(25, 50, 66);
+}
+
+.explore h2::before, .offer h2::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:3px;
+    background-color: rgb(25, 50, 66);
+    top:0;
+    left:620px;
+}
+
+.explore .explore_cont{
+    position:absolute;
+    left:130px;
+}
+
+.explore .explore_cont .card{
+    width:300px;
+    height:250px;
+    background-image: linear-gradient(to bottom, black, transparent),url("../images/greece.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    float: left;
+    position: relative;
+    margin: 10px 10px;
+}
+
+.explore .explore_cont .card .name{
+    position:absolute;
+    top:10px;
+    background-color: white;
+    border-radius: 0 20px 20px 0;
+    padding: 10px;
+}
+
+.explore .explore_cont .card .name h3{
+    font-size: 25px;
+    color:rgb(25, 50, 66);
+}
+
+.explore .explore_cont .bigger{
+    width:550px;
+    height:250px;
+}
+
+
+
+/************************************************************************************************************/
+
+/*OFFER*/
+
+.offer{
+    background-color: white;
+    height:auto;
+    position: relative;
     text-align: center;
 }
-.explore h2{
-    font-size: 40px;
-    margin:40px 40px;
-    
+
+.offer .offers_cont{
+    position: relative;
+    height:1100px;
 }
 
-.explore .cards{
-    position:relative;
+.offer .offers_cont .offers{
+    position: absolute;
+    left:90px;
 }
 
-.explore .cards .trip{
+.offer .offers_cont .offers .card{
+    width:25%;
+    height:430px;
+    border-radius: 20px;
+    box-shadow: 2px 10px 10px grey;
     float:left;
-    width:20%;
-    margin:0px 10px;
-    height:450px;
-    background-image: url("../images/maldives.jpg");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    position:relative;
+    margin:40px 40px;
 }
 
-.explore .cards .trip_content{
-    position:absolute;
-    bottom:0;
-    background-color: rgba(0, 0, 0, 0.5);
+.offer .offers_cont .offers .card img{
     width:100%;
-    height:100px;
+    height: 300px;
+    border-radius: 20px 20px 0 0;
 }
 
-.explore .cards .trip_content h1, .explore .cards .trip_content p{
-    color:white;
+.offer .offers_cont .offers .card .content{
+    text-align: center;
+    padding:20px;
+    color:rgb(25, 50, 66);
+    line-height: 1.5rem;
 }
+
+.offer .offers_cont .offers .card .content p del{
+    text-decoration: line-through;
+}
+
+/************************************************************************************************************/
+
+/*ABOUT*/
 
 .about{
-    background-color: rgb(0, 14, 15);
+    background-image: linear-gradient(to bottom, rgb(0, 14, 15),transparent), url("../images/about5.jpg");
+    background-repeat: no-repeat;
+    background-position-y: center;
+    background-size: cover;
     height:500px;
     position: relative;
+    text-align: center;
+    width:100%;
 }
+
 
 .about h2{
     color:white;
-    margin:40px;
     font-size: 40px;
-    position: absolute;
-    left :10px;
-    top:20px;
+    padding:10px;
+}
+
+.about h2::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:3px;
+    background-color: white;
+    top:0;
+    left:620px;
 }
 
 .about .text_content{
-    width: 500px;
-    height:100px;
-    position: absolute;
-    left:50px;
-    top:150px;
+    margin:50px;
 }
+
+
 .about .text_content p{
     color:white;
     line-height: 2rem;
 }
 
-.about img{
-    height:400px;
-    width:700px;
-    position:absolute;
-    right:0;
-}
+
+
+/************************************************************************************************************/
+
+/*CONTACT*/
 
 .contact{
     background-color: rgb(0, 14, 15);
-    height:500px;
+    width:100%;
     position: relative;
+    text-align: center;
+    height:450px;
 }
 
-.contact{
-
+.contact .form_container{
+    padding: 10px;
+    
 }
+.contact .form_container h2{
+    color:white;
+}
+
+
+.contact .form_container h2::before{
+    content:"";
+    position:absolute;
+    width:250px;
+    height:3px;
+    background-color: white;
+    top:70px;
+    left:620px;
+}
+
+
+.contact .form_container form{
+    position:relative;
+    height:250px;
+}
+
+.contact .form_container form input{
+    padding:10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    width:315px;
+    font-size: 20px;
+    color:grey;
+}
+
+.contact .form_container form textarea{
+    padding:10px;
+    border-radius: 10px;
+    border: 1px solid grey;
+    width:670px;
+    height:80px;
+    position:absolute;
+    top:55px;
+    left:258px;
+    font-size: 20px;
+    color:grey;
+}
+
+.contact .form_container form button{
+    position:absolute;
+    width:275px;
+    height:80px;
+    padding:20px;
+    top:55px;
+    right:260px;
+    background-color: rgb(25, 50, 66);
+    color:white;
+    border: transparent;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
 

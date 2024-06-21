@@ -6,34 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-    <title>Booking</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>TakeFlight</title>
 </head>
 <body>
+
+    <!--NAV BAR-->
     <header>
         <nav>
             <div class="nav_cont">
                 <div class="title">
-                    <h1>Take Flight</h1>
+                    <h1>TakeFlight</h1>
                 </div>
                 <div class="links">
                     <ul>
                         <li>
-                            <a>Home</a>
+                            <a href="index.html">Home</a>
                         </li>
                         <li>
-                            <a>About</a>
+                            <a href="#explore">Explore</a>
+                            
+                        </li> 
+                        <li>
+                            <a href="#offer">Offer</a>
                         </li>
                         <li>
-                            <a>Explore</a>
+                            <a href="#about">About</a>
                         </li>
                         <li>
-                            <a>Blog</a>
-                        </li>
-                        <li>
-                            <a>Offer</a>
-                        </li>
-                        <li>
-                            <a>Contact</a>
+                            <a href="#contact">Contact</a>
                         </li>
                         <li class="clr"></li>
                     </ul>
@@ -47,6 +48,8 @@
                 <p>Explore the world</p>
             </div>
         </div>
+
+        <!--Flight Search-->
         <div class="search">
             <div class="form_cont">
                 <div class="input">
@@ -73,87 +76,155 @@
                     </span>
                     <input id="rooms" placeholder="Number of rooms">
                 </div>
-                <div class="input">
-                    <span class="material-symbols-outlined">
-                        concierge
-                    </span>
-                    <input id="rooms" placeholder="Flight class">
-                </div>
-                <div class="input">
-                    <span class="material-symbols-outlined">
-                        concierge
-                    </span>
-                    <input id="rooms" placeholder="Adults">
-                </div>
-                <div class="input">
-                    <span class="material-symbols-outlined">
-                        concierge
-                    </span>
-                    <input id="rooms" placeholder="Children">
-                </div>
                 <div class="clr"></div>
                 <button type="submit">Search</button>
             </div>
         </div>
     </header>
 
-    <section class="explore">
+    <!--EXPLORE-->
+    <section id="explore" class="explore">
         <h2>Explore</h2>
-        <div class="cards">
-            <div class="trip">
-                <div class="trip_content">
-                    <h1>Maldives</h1>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button>Details</button>
+        <div class="explore_cont">
+            
+            <a href="index.html" class="card bigger">
+                <div class="name">
+                    <h3>Greece</h3>
                 </div>
-            </div>
-            <div class="trip">
-                <div class="trip_content">
-                    <h1>Maldives</h1>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button>Details</button>
+            </a>
+
+            <a href="index.html" class="card">
+                <div class="name">
+                    <h3>Greece</h3>
                 </div>
-            </div>
-            <div class="trip">
-                <div class="trip_content">
-                    <h1>Maldives</h1>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button>Details</button>
+            </a>
+
+            <a href="index.html" class="card">
+                <div class="name">
+                    <h3>Greece</h3>
                 </div>
-            </div>
-            <div class="trip">
-                <div class="trip_content">
-                    <h1>Maldives</h1>
-                    <p>Lorem ipsum dolor sit amet.</p>
-                    <button>Details</button>
+            </a>
+
+            <a href="index.html" class="card">
+                <div class="name">
+                    <h3>Greece</h3>
                 </div>
-            </div>
-            <div class="clr"></div>
+            </a>
+
+            <a href="index.html" class="card">
+                <div class="name">
+                    <h3>Greece</h3>
+                </div>
+            </a>
+
+            <a href="index.html" class="card bigger">
+                <div class="name">
+                    <h3>Greece</h3>
+                </div>
+            </a>
+            <a href="" class="clr"></a>
         </div>
     </section>
 
-    <section class="offer">
+    <!--OFFER-->
+    <section id="offer" class="offer">
+        <h2>Offers</h2>
+        <div class="offers_cont">
+            <div class="offers">
 
-    </section>
+                <div class="card">
+                    <a href="#offer">
+                        <img src="images/london.jpg" alt="London">
+                        <div class="content">
+                            <h1>London</h1>
+                            <p>Jun 22 - Sept 22</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <p><b>Price: </b><del>$1500</del> $1000</p>
+                        </div>
+                    </a>
+                </div>
 
-    <section class="about">
-        <img src="images/about4.png" alt="airplane window">
-        <h2>About</h2>
-        <div class="text_content">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                Reprehenderit eos magnam ipsum est quisquam ea nostrum minima saepe odio praesentium!
-            </p>
+                <div class="card">
+                    <a href="#offer">
+                        <img src="images/london.jpg" alt="London">
+                        <div class="content">
+                            <h1>London</h1>
+                            <p>Jun 22 - Sept 22</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <p><b>Price: </b><del>$1500</del> $1000</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#offer">
+                        <img src="images/london.jpg" alt="London">
+                        <div class="content">
+                            <h1>London</h1>
+                            <p>Jun 22 - Sept 22</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <p><b>Price: </b><del>$1500</del> $1000</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="card">
+                    <a href="#offer">
+                        <img src="images/london.jpg" alt="London">
+                        <div class="content">
+                            <h1>London</h1>
+                            <p>Jun 22 - Sept 22</p>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star checked"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <p><b>Price: </b><del>$1500</del> $1000</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="clr"></div>
+
+            </div>
         </div>
     </section>
 
-    <section class="contact">
-        <h2>Contact</h2>
-        <div class="message">
+    <!--CONTACT-->
+    <section  id="contact" class="contact">
+        <div class="form_container">
+            <h2>Contact Us</h2>
             <form>
-                <label for="email">Email</label>
-                <input name="email">
+                <input type="email" name="email" placeholder="Email">
+                <input type="text" placeholder="Name">
+                <input type="text" placeholder="Subject">
+                <textarea placeholder="Message"></textarea>
+                <button type="submit">Submit</button>
             </form>
         </div>
     </section>
+
+    <!--ABOUT-->
+    <section id="about" class="about">
+        <h2>About</h2>
+        <div class="text_content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur recusandae, non velit a quaerat, sunt facere mollitia labore adipisci totam harum sequi, cumque ratione laboriosam? Quam omnis quasi possimus, fugiat nostrum natus? Eligendi id temporibus saepe nemo, quasi beatae ea dolorum, eius dolor quibusdam commodi quis quia praesentium ipsam eum quos perspiciatis qui voluptatum corrupti. Excepturi nihil minus recusandae beatae voluptates, earum soluta explicabo iusto nemo, tenetur, aliquam corrupti quam.
+            <p>Copy Right 2024 © By DEPI All Rights Reserved</p>
+        </div> 
+    </section>
+
+
 </body>
 </html>
