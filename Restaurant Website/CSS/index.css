@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Nanum Gothic", sans-serif;
+}
+
+li{
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+/**/
+
+header{
+    height:auto;
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    
+}
+
+header nav{
+    width: 80%;
+    padding:20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+header nav .logo{
+    
+}
+
+header nav .logo h1{
+    color: white;
+}
+
+header nav .links1{  
+
+}
+
+header nav .links1 ul{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+header nav .links1 ul li a{
+    color: white;
+    margin: 0 15px;
+}
+
+header nav .links2{
+    color: white;
+}
+
+header nav .links2 ul{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+header nav .links2 ul li a{
+    color: white;
+    margin: 0 15px;
+}
+
+/**/
+
+.first{
+    height: 100vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: rgb(30, 30, 30);
+}
+
+.first .first_cont{
+    width:90%;
+    padding:20px;
+    margin:10px;
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.first .first_cont img{
+    width:45%;
+    height: 85%;
+}
+
+.first .first_cont .text{
+    width:50%;
+    position: absolute;
+    top:30%;
+    right:0;
+}
+
+.first .first_cont .text h2{
+    color: white;
+    font-size: 50px;
+    margin: 10px;
+}
+
+.first .first_cont .text p{
+    font-size: 45px;
+    color: white;
+    margin: 10px;
+}
+
+.first .first_cont .text button{
+    border: transparent;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: 30px;
+    margin: 10px;
+}
