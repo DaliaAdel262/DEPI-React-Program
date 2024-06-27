@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Nanum Gothic", sans-serif;
+    font-family: "Roboto Flex", sans-serif;
 }
 
 li{
@@ -38,11 +38,9 @@ header nav .logo{
 
 header nav .logo h1{
     color: white;
+    font-size: 30px;
 }
 
-header nav .links1{  
-
-}
 
 header nav .links1 ul,header nav .links2 ul{
     display: flex;
@@ -51,67 +49,110 @@ header nav .links1 ul,header nav .links2 ul{
 }
 
 header nav .links1 ul li a, header nav .links2 ul li a{
+    width:100%;
+    height: 100%;
+    position: relative;
     color: white;
     margin: 0 10px;
     padding:10px;
-    transition: 0.5s all;
     font-size: 20px;
 }
 
 header nav .links2 ul li a{
     border-radius: 20px;
+    padding:0;
 }
 
+header nav .links1 ul li a::after,header nav .links2 ul li a::after{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-top: 5px rgb(105, 93, 15) solid;
+    border-radius: 20px;
+    display: none;
+    left:0;
+    top:0;
+    transition: 5s all;
+}
 
-header nav .links1 ul li a:hover, header nav .links2 ul li a:hover{
-    background-color: rgb(105, 93, 15);
+header nav .links1 ul li a::before,header nav .links2 ul li a::before{
+    content:"";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-bottom: 5px rgb(105, 93, 15) solid;
+    border-radius: 20px;
+    display: none;
+    left:0;
+    top:0;
+    transition: 5s all;
+}
 
+header nav .links1 ul li a:hover::before,
+header nav .links1 ul li a:hover::after,
+header nav .links2 ul li a:hover::before,
+header nav .links2 ul li a:hover::after{
+    display: block;
+}
+
+@keyframes animation {
+    0%{
+
+    }
+    50%{
+
+    }
+    100%{
+
+    }
 }
 
 /**/
 
-.first{
+header .first{
     width:100%;
     height: 100vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    background-color: rgb(30, 30, 30);
-    box-shadow: 5px 10px 10px 10px #000000;
 }
 
-.first .first_cont{
+header .first .first_cont{
+    width:80%;
     margin:10px;
     position: relative;
     display: flex;
     flex-flow: row wrap;
 }
 
-.first .first_cont img{
+header .first .first_cont img{
     width:50%;
     height: 85%;
 }
 
-.first .first_cont .text{
+header .first .first_cont .text{
     width:50%;
     position: absolute;
     top:30%;
     right:0;
 }
 
-.first .first_cont .text h2{
-    color: white;
+header .first .first_cont .text h2{
+    background: linear-gradient(45deg, rgba(105,93,15,1) 6%, rgba(207,187,58,1) 24%, rgba(105,93,15,1) 51%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
     font-size: 50px;
     margin: 10px;
 }
 
-.first .first_cont .text p{
+header .first .first_cont .text p{
     font-size: 45px;
     color: white;
     margin: 10px;
 }
 
-.first .first_cont .text button{
+header .first .first_cont .text button{
     border: transparent;
     border: 5px rgb(105, 93, 15) solid;
     border-left: white;
@@ -125,18 +166,17 @@ header nav .links1 ul li a:hover, header nav .links2 ul li a:hover{
     transition: 0.5s all;
 }
 
-.first .first_cont .text button:hover{
+header .first .first_cont .text button:hover{
     background-color: rgb(105, 93, 15);
 }
 
 /**/
 
 .popular{
-    height: 100vh;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
+    background: linear-gradient(45deg, rgba(105,93,15,1) 13%, rgba(207,187,58,1) 52%, rgba(105,93,15,1) 89%);
 }
 
 .popular .pop_cont{
@@ -147,7 +187,7 @@ header nav .links1 ul li a:hover, header nav .links2 ul li a:hover{
 }
 
 .popular .pop_cont h2{
-    color:rgb(30, 30, 30);
+    color:white;
     font-size: 30px;
     margin:30px;
     padding: 30px;
@@ -159,7 +199,7 @@ header nav .links1 ul li a:hover, header nav .links2 ul li a:hover{
     position: absolute;
     width: 200px;
     height: 40px;
-    border: 5px rgb(105, 93, 15) solid;
+    border: 5px white solid;
     border-left: white;
     border-right: white;
     border-radius: 20px;
@@ -175,15 +215,26 @@ header nav .links1 ul li a:hover, header nav .links2 ul li a:hover{
 }
 
 .popular .pop_cont .items .item{
-    width:30%;
-    background-color: rgb(30, 30, 30);
+    position: relative;
+    padding:30px;
+    height: 100%;
+    width:25%;
+    background: rgba(105, 93, 15,0.8);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
     margin:10px 10px;
 }
 
 .popular .pop_cont .items .item .layer{
-    position: absolute;
-    color: rgb(105, 93, 15);
+    position: relative;
+    color: rgb(207,187,58);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
 }
+
+
 
 
 .popular .pop_cont .items .item:hover{
@@ -195,17 +246,37 @@ header nav .links1 ul li a:hover, header nav .links2 ul li a:hover{
     height: 75%;
 }
 
+.popular .pop_cont .items .item .details{
+    width:70%;
+    margin: auto;
+}
+
+.popular .pop_cont .items .item .details p,.popular .pop_cont .items .item .details h3{
+    color: white;
+}
+
+.popular .pop_cont .items .item button{
+    background-color: rgb(30, 30, 30);
+    border-radius: 20px;
+    border: transparent;
+    padding:10px;
+    color: white;
+    margin:10px;
+    font-size: 15px;
+}
+
+/**/
 /**/
 
 .order{
     background-color: rgb(30, 30, 30);
-    height: 65vh;
     overflow: auto;
 }
 
 .order .order_cont{
+    height: 90%;
     text-align: center;
-    margin:50px;
+    margin:30px;
 }
 
 .order .order_cont h3{
@@ -229,10 +300,34 @@ header nav .links1 ul li a:hover, header nav .links2 ul li a:hover{
     left:42%;
 }
 
-/**/
+.order .order_cont .form_cont{
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.order .order_cont .form_cont form{
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.order .order_cont .form_cont form label{
+    font-size: 15px;
+    color: white;
+}
+
+.order .order_cont .form_cont form input{
+    border: transparent;
+    border-radius: 20px;
+    padding:5px;
+}
+
+/************************************************************************************************************************************************************************/
 footer{
     background-color: rgb(30, 30, 30);
-    height: 65vh;
+    text-align: center;
     overflow: auto;
 }
 
@@ -251,7 +346,9 @@ footer .flink .fcard h3{
     font-size: 25px;
 }
 
-
+footer .flink .fcard ul{
+    margin:20px;
+}
 
 footer .flink .fcard ul li{
    margin: 10px;
@@ -259,5 +356,15 @@ footer .flink .fcard ul li{
 
 footer .flink .fcard ul li a{
     font-size: 15px;
+    color: white;
+}
+
+footer .copyright{
+    padding: 20px;
+    font-size: 15px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    background-color: rgb(105, 93, 15);
     color: white;
 }
