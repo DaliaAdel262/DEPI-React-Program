@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/index.css">
     <title>Document</title>
 </head>
 <body>
@@ -20,25 +20,43 @@
             <div class="links1">
                 <ul>
                     <li>
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                        <div class="span"></div>
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="index.html">Popular</a>
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                        <div class="span"></div>
+                        <a href="#popular">Popular</a>
                     </li>
                     <li>
-                        <a href="index.html">Menu</a>
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                        <div class="span"></div>
+                        <a href="#menu">Menu</a>
                     </li>
                     <li>
-                        <a href="index.html">Order</a>
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                        <div class="span"></div>
+                        <a href="#order">Order</a>
                     </li>
                     <li>
-                        <a href="index.html">About</a>
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                        <div class="span"></div>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
             <div class="links2">
                 <ul>
                     <li>
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                        <div class="span"></div>
                         <a href="index.html">
                             <span class="material-symbols-outlined">
                                 search
@@ -46,9 +64,12 @@
                         </a>
                     </li>
                     <li>
+                        <div class="top"></div>
+                        <div class="bottom"></div>
+                        <div class="span"></div>
                         <a href="index.html">
                             <span class="material-symbols-outlined">
-                                person
+                                shopping_cart
                             </span>
                         </a>
                     </li>
@@ -70,23 +91,23 @@
 
 
     <!--POPULAR-->
-    <section class="popular">
+    <section id="popular" class="popular">
         <div class="pop_cont">
             <h2>Popular Picks</h2>
             <div class="items">
+
                 <div class="item">
                     <div class="layer">
-                        <a href="">
+                        <div class="left">
                             <span class="material-symbols-outlined">
-                            visibility
+                                visibility
                             </span>
-                        </a>
-                        <a class="left" href="">
+                        </div>
+                        <div class="right">
                             <span class="material-symbols-outlined">
-                            favorite
+                                favorite
                             </span>
-                        </a>
-                        
+                        </div>
                     </div>
                     <img src="images/sushi.png" alt="spicy tuna roll">
                     
@@ -97,6 +118,18 @@
                     </div>
                 </div>
                 <div class="item">
+                    <div class="layer">
+                        <div class="left">
+                            <span class="material-symbols-outlined">
+                                visibility
+                            </span>
+                        </div>
+                        <div class="right">
+                            <span class="material-symbols-outlined">
+                                favorite
+                            </span>
+                        </div>
+                    </div>
                     <img src="images/sushi.png" alt="spicy tuna roll">
                     <div class="details">
                         <h3>Spicy Tuna Roll</h3>
@@ -105,6 +138,18 @@
                     </div>
                 </div>
                 <div class="item">
+                    <div class="layer">
+                        <div class="left">
+                            <span class="material-symbols-outlined">
+                                visibility
+                            </span>
+                        </div>
+                        <div class="right">
+                            <span class="material-symbols-outlined">
+                                favorite
+                            </span>
+                        </div>
+                    </div>
                     <img src="images/sushi.png" alt="spicy tuna roll">
                     <div class="details">
                         <h3>Spicy Tuna Roll</h3>
@@ -113,6 +158,18 @@
                     </div>
                 </div>
                 <div class="item">
+                    <div class="layer">
+                        <div class="left">
+                            <span class="material-symbols-outlined">
+                                visibility
+                            </span>
+                        </div>
+                        <div class="right">
+                            <span class="material-symbols-outlined">
+                                favorite
+                            </span>
+                        </div>
+                    </div>
                     <img src="images/sushi.png" alt="spicy tuna roll">
                     <div class="details">
                         <h3>Spicy Tuna Roll</h3>
@@ -125,36 +182,133 @@
     </section>
 
     <!--MENU SECTION-->
-    <section>
+    <section id="menu" class="menu">
+        <div class="overlay"></div>
+        <div class="menu_cont">
+            <h2>Menu</h2>
+            <div class="sushi_type">
+                <ul>
+                    <li>
+                        <a href="">Ura Maki</a>
+                    </li>
+                    <li>
+                        <a href="">Tempura</a>
+                    </li>
+                    <li>
+                        <a href="">Nigiri</a>
+                    </li>
+                    <li>
+                        <a href="">Ramen</a>
+                    </li>
+                </ul>
+            </div>
 
+            <div class="dishes_cont">
+                <div class="dish">
+                    <div class="cart">
+                        <button type="submit">Add to cart</button>
+                    </div>
+                    <img src="images/uramaki.jpg" alt="hot salmon ura maki">
+                    <div class="dish_name">
+                        <h3>Hot Salmon</h3>
+                        <p>10LE</p>
+                    </div>
+                    <div class="dish_desc">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="dish">
+                    <div class="cart">
+                        <button type="submit">Add to cart</button>
+                    </div>
+                    <img src="images/uramaki.jpg" alt="hot salmon ura maki">
+                    <div class="dish_name">
+                        <h3>Hot Salmon</h3>
+                        <p>10LE</p>
+                    </div>
+                    <div class="dish_desc">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="dish">
+                    <div class="cart">
+                        <button type="submit">Add to cart</button>
+                    </div>
+                    <img src="images/uramaki.jpg" alt="hot salmon ura maki">
+                    <div class="dish_name">
+                        <h3>Hot Salmon</h3>
+                        <p>10LE</p>
+                    </div>
+                    <div class="dish_desc">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+                <div class="dish">
+                    <div class="cart">
+                        <button type="submit">Add to cart</button>
+                    </div>
+                    <img src="images/uramaki.jpg" alt="hot salmon ura maki">
+                    <div class="dish_name">
+                        <h3>Hot Salmon</h3>
+                        <p>10LE</p>
+                    </div>
+                    <div class="dish_desc">
+                        <p>Lorem ipsum dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
     </section>
 
     <!--ORDER SECTION-->
-    <section class="order">
+    <section id="order"class="order">
         <div class="order_cont">
-            <h3>Add an address</h3>
+            <h2>Address</h2>
             <div class="form_cont">
                 <form action="submit">
-                    <label for="name">Name</label>
-                    <input id="name" type="text">
 
-                    <label for="phone_no">Phone number</label>
-                    <input id="phone_no" type="text">
+                    <div class="label">
+                        <label for="name">Name</label>
+                        <input id="name" type="text">
+                    </div>
 
-                    <label for="address">Address</label>
-                    <input id="address" type="text">
 
-                    <label for="street">Street</label>
-                    <input id="street" type="text">
+                    <div class="label">
+                        <label for="phone_no">Phone no.</label>
+                        <input id="phone_no" type="text">
+                    </div>
+                    
 
-                    <label for="apt_no">Apt number</label>
-                    <input id="apt_no" type="text">
+                    <div class="label">
+                        <label for="address">Address</label>
+                        <input id="address" type="text">
+                    </div>
 
-                    <label for="flat_no">Flat number</label>
-                    <input id="flat_no" type="text">
 
-                    <label for="add_comments">Additional comments</label>
-                    <input id="add_comments" type="text">
+                    <div class="label">
+                        <label for="street">Street</label>
+                        <input id="street" type="text">
+                    </div>
+
+
+                    <div class="label">
+                        <label for="apt_no">Apt no.</label>
+                        <input id="apt_no" type="text">
+                    </div>
+
+
+                    <div class="label">
+                        <label for="flat_no">Flat no.</label>
+                        <input id="flat_no" type="text">
+                    </div>
+
+
+                    <div class="label bigger">
+                        <label for="add_comments">Additional comments</label>
+                        <input class="" id="add_comments" type="text">
+                    </div>
+
 
                     <button type="submit">Add</button>
 
@@ -163,13 +317,8 @@
         </div>
     </section>
 
-    <!--ABOUT SECTION-->
-    <section class="about">
-
-    </section>
-
     <!--FOOTER-->
-    <footer>
+    <footer id="contact">
         <div class="flink">
             <div class="fcard">
                 <h3>Branches</h3>
@@ -187,16 +336,16 @@
                         <a href="index.html">Home</a>
                     </li>
                     <li>
-                        <a href="index.html">Popular</a>
+                        <a href="#popular">Popular</a>
                     </li>
                     <li>
-                        <a href="index.html">Menu</a>
+                        <a href="#menu">Menu</a>
                     </li>
                     <li>
-                        <a href="index.html">Order</a>
+                        <a href="#order">Order</a>
                     </li>
                     <li>
-                        <a href="index.html">About</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -204,13 +353,13 @@
                 <h3>Contact Us</h3>
                 <ul>
                     <li>
-                        <a href="index.html">sumosushi@gmail.com</a>
+                        <a href="#">sumosushi@gmail.com</a>
                     </li>
                     <li>
-                        <a href="index.html">+123-456-789</a>
+                        <a href="#">+123-456-789</a>
                     </li>
                     <li>
-                        <a href="index.html">1234</a>
+                        <a href="#">1234</a>
                     </li>
                 </ul>
             </div>
@@ -218,13 +367,13 @@
                 <h3>Follow Us</h3>
                 <ul>
                     <li>
-                        <a href="index.html">Twitter</a>
+                        <a href="#">Twitter</a>
                     </li>
                     <li>
-                        <a href="index.html">Intsagram</a>
+                        <a href="#">Intsagram</a>
                     </li>
                     <li>
-                        <a href="index.html">Facebook</a>
+                        <a href="#">Facebook</a>
                     </li>
                 </ul>
             </div>

@@ -13,10 +13,9 @@ a{
     text-decoration: none;
 }
 
-/**/
+/****************************************************************************************************/
 
 header{
-    height:auto;
     background-color: rgb(30, 30, 30);
     display: flex;
     flex-flow: row wrap;
@@ -32,13 +31,11 @@ header nav{
     justify-content: space-between;
     align-items: center;
 }
-header nav .logo{
-    
-}
 
 header nav .logo h1{
     color: white;
     font-size: 30px;
+    padding: 10px;
 }
 
 
@@ -48,67 +45,74 @@ header nav .links1 ul,header nav .links2 ul{
     justify-content: space-between;
 }
 
+header nav .links1 ul li,header nav .links2 ul li{
+    margin: 0 20px;
+    position: relative;
+}
+
+
+header nav .links1 ul li .top,header nav .links2 ul li .top{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(30, 30, 30);
+    bottom:10px;
+    z-index: 2;
+    transition:  0.5s all;
+}
+
+header nav .links1 ul li .bottom,header nav .links2 ul li .bottom{
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    background-color: rgb(30, 30, 30);
+    top:10px;
+    z-index: 2;
+    transition:  0.5s all;
+}
+
 header nav .links1 ul li a, header nav .links2 ul li a{
     width:100%;
     height: 100%;
     position: relative;
     color: white;
     margin: 0 10px;
-    padding:10px;
+    padding: 5px;
+    font-size: 20px;
+    z-index: 3;
+}
+
+.material-symbols-outlined{
     font-size: 20px;
 }
 
 header nav .links2 ul li a{
     border-radius: 20px;
-    padding:0;
 }
 
-header nav .links1 ul li a::after,header nav .links2 ul li a::after{
-    content:"";
+header nav .links1 ul li .span,header nav .links2 ul li .span{
     position: absolute;
+    top:-5px;
+    z-index: 1;
     width: 100%;
-    height: 100%;
+    height: 35px;
     border-top: 5px rgb(105, 93, 15) solid;
+    border-bottom: 5px rgb(105, 93, 15) solid;;
     border-radius: 20px;
-    display: none;
-    left:0;
-    top:0;
-    transition: 5s all;
 }
 
-header nav .links1 ul li a::before,header nav .links2 ul li a::before{
-    content:"";
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    border-bottom: 5px rgb(105, 93, 15) solid;
-    border-radius: 20px;
-    display: none;
-    left:0;
-    top:0;
-    transition: 5s all;
+
+header nav .links1 ul li:hover .top,header nav .links2 ul li:hover .top{
+    width: 0;
+    right: 0;
 }
 
-header nav .links1 ul li a:hover::before,
-header nav .links1 ul li a:hover::after,
-header nav .links2 ul li a:hover::before,
-header nav .links2 ul li a:hover::after{
-    display: block;
+header nav .links1 ul li:hover .bottom,header nav .links2 ul li:hover .bottom{
+    width: 0;
 }
 
-@keyframes animation {
-    0%{
 
-    }
-    50%{
-
-    }
-    100%{
-
-    }
-}
-
-/**/
+/*******************************************************************************************************************************/
 
 header .first{
     width:100%;
@@ -129,10 +133,13 @@ header .first .first_cont{
 header .first .first_cont img{
     width:50%;
     height: 85%;
+    position: absolute;
+    top:0;
+    left:0;
 }
 
 header .first .first_cont .text{
-    width:50%;
+    width:45%;
     position: absolute;
     top:30%;
     right:0;
@@ -142,12 +149,12 @@ header .first .first_cont .text h2{
     background: linear-gradient(45deg, rgba(105,93,15,1) 6%, rgba(207,187,58,1) 24%, rgba(105,93,15,1) 51%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-size: 50px;
+    font-size: 55px;
     margin: 10px;
 }
 
 header .first .first_cont .text p{
-    font-size: 45px;
+    font-size: 40px;
     color: white;
     margin: 10px;
 }
@@ -189,56 +196,74 @@ header .first .first_cont .text button:hover{
 .popular .pop_cont h2{
     color:white;
     font-size: 30px;
-    margin:30px;
     padding: 30px;
     position: relative;
+    width: 20%;
+    margin: auto;
 }
 
 .popular .pop_cont h2::after{
     content: "";
     position: absolute;
-    width: 200px;
-    height: 40px;
+    width: 100%;
+    height: 50%;
     border: 5px white solid;
     border-left: white;
     border-right: white;
     border-radius: 20px;
-    top:25%;
-    left:42%;
+    top:20px;
+    left:0;
 }
 
 
 .popular .pop_cont .items{
+    width: 90%;
     display: flex;
     flex-flow: row wrap;
-    justify-content: center;
+    justify-content: start;
+    margin: 0  auto;
 }
 
 .popular .pop_cont .items .item{
     position: relative;
-    padding:30px;
+    padding:25px;
     height: 100%;
     width:25%;
-    background: rgba(105, 93, 15,0.8);
+    background: rgba(105, 93, 15,0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
-    margin:10px 10px;
+    margin:10px 20px;
+    overflow: hidden;
 }
 
 .popular .pop_cont .items .item .layer{
     position: relative;
     color: rgb(207,187,58);
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
+    width:100%;
+    
+}
+
+.popular .pop_cont .items .item .layer .left{
+    position: absolute;
+    left:-50px;
+    transition: 0.3s all;
+
+}
+
+.popular .pop_cont .items .item .layer .right{
+    position: absolute;
+    right:-50px;
+    transition: 0.3s all;
 }
 
 
+.popular .pop_cont .items .item:hover .layer .left{
+    transform: translateX(70px);
+}
 
-
-.popular .pop_cont .items .item:hover{
-
+.popular .pop_cont .items .item:hover .layer .right{
+    transform: translateX(-70px);
 }
 
 .popular .pop_cont .items .item img{
@@ -253,20 +278,162 @@ header .first .first_cont .text button:hover{
 
 .popular .pop_cont .items .item .details p,.popular .pop_cont .items .item .details h3{
     color: white;
+    font-size: 20px;
 }
 
 .popular .pop_cont .items .item button{
-    background-color: rgb(30, 30, 30);
+    background-color: rgb(207,187,58);
     border-radius: 20px;
     border: transparent;
     padding:10px;
     color: white;
     margin:10px;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 /**/
-/**/
+
+.menu{
+    position: relative;
+    background-image: url("../images/bg.webp");
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+}
+
+.menu .overlay{
+    position: absolute;
+    top:0;
+    right: 0;
+    width:100%;
+    height: 100%;
+    background-color: rgba(30, 30, 30,0.7);
+    z-index:1;
+}
+
+.menu .menu_cont{
+    position: relative;
+    width:90%;
+    padding:10px;
+    margin: auto;
+    text-align: center;
+    z-index: 2;
+}
+
+.menu .menu_cont h2{
+    width: 10%;
+    color:white;
+    font-size: 30px;
+    margin:auto;
+    padding: 30px;
+    position: relative;
+}
+
+.menu .menu_cont h2::after{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 50%;
+    border: 5px white solid;
+    border-left: white;
+    border-right: white;
+    border-radius: 20px;
+    top:20%;
+    left:0;
+}
+
+
+.menu .menu_cont .sushi_type ul{
+    margin-top: 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+
+.menu .menu_cont .sushi_type ul li:nth-child(1){
+    background-color: rgb(30, 30, 30);
+}
+
+
+.menu .menu_cont .sushi_type ul li:nth-child(2):hover,
+.menu .menu_cont .sushi_type ul li:nth-child(3):hover,
+.menu .menu_cont .sushi_type ul li:nth-child(4):hover{
+    background-color: rgb(30, 30, 30);
+}
+
+.menu .menu_cont .sushi_type ul li{
+    padding: 20px;
+}
+
+.menu .menu_cont .sushi_type ul li a{
+    color: white;
+    font-size: 20px;
+}
+
+.menu .menu_cont .dishes_cont{
+    height: 100%;
+    width:100%;
+    margin: 0 auto;
+    padding:30px;
+    background-color: rgb(30, 30, 30);
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: start;
+}
+
+.menu .menu_cont .dishes_cont .dish{
+    position: relative;
+    width: 25%;
+    height: 100%;
+    margin:30px 30px;
+    overflow: hidden;
+}
+
+.menu .menu_cont .dishes_cont .dish .cart button{
+    position: absolute;
+    background-color: rgb(171, 155, 53);
+    color: white;
+    font-size: 20px;
+    padding: 10px;
+    border: transparent;
+    left:-150px;
+    transition: 0.5s all;
+}
+
+.menu .menu_cont .dishes_cont .dish:hover .cart button{
+    transform: translateX(150px);
+}
+
+.menu .menu_cont .dishes_cont .dish .dish_name{
+    padding: 20px;
+    font-size: 20px;
+    width:70%;
+    margin: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    border-bottom: white solid 1px;
+}
+
+.menu .menu_cont .dishes_cont .dish .dish_desc{
+    padding: 20px;
+    font-size: 20px;
+    width: 70%;
+    margin: auto;
+}
+
+.menu .menu_cont .dishes_cont .dish .dish_name h3,
+.menu .menu_cont .dishes_cont .dish .dish_name p,
+.menu .menu_cont .dishes_cont .dish .dish_desc p{
+    color: white;
+}
+
+.menu .menu_cont .dishes_cont .dish img{
+    width:80%;
+    height: 70%;
+}
+
+/******************************************************************************************************************************************************************************************/
 
 .order{
     background-color: rgb(30, 30, 30);
@@ -275,53 +442,91 @@ header .first .first_cont .text button:hover{
 
 .order .order_cont{
     height: 90%;
-    text-align: center;
     margin:30px;
 }
 
-.order .order_cont h3{
-    color: rgb(105, 93, 15);
+.order .order_cont h2{
+    width: 10%;
+    height: 10%;
     font-size: 30px;
-    margin:30px;
-    padding: 30px;
+    margin:auto;
+    padding: 20px;
     position: relative;
+    color: rgb(105, 93, 15);
+    text-align: center;
+    
 }
 
-.order .order_cont h3::after{
+.order .order_cont h2::after{
     content: "";
     position: absolute;
-    width: 228px;
-    height: 40px;
+    width: 100%;
+    height: 50%;
     border: 5px rgb(105, 93, 15) solid;
     border-left: white;
     border-right: white;
     border-radius: 20px;
-    top:25%;
-    left:42%;
+    top:20%;
+    left:0;
 }
 
 .order .order_cont .form_cont{
-    height: 100%;
+    padding:20px;
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.order .order_cont .form_cont form{
+    position: relative;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
 }
 
-.order .order_cont .form_cont form{
-    width: 80%;
-    display: flex;
-    flex-flow: row wrap;
+.order .order_cont .form_cont form .label{
+    width:40%;
+    height:80px;
+    padding-bottom: 20px;
+    position: relative;
 }
 
-.order .order_cont .form_cont form label{
+
+.order .order_cont .form_cont form .label label{
+    width:40%;
+    margin:10px;
     font-size: 15px;
     color: white;
 }
 
-.order .order_cont .form_cont form input{
+.order .order_cont .form_cont form .label input {
     border: transparent;
+    background-color: transparent;
+    border-bottom: white solid 1px;
+    padding: 5px;
+    max-width: 500px; 
+    position: absolute;
+    bottom:70px;
+    color: white;
+}
+
+.order .order_cont .form_cont form .bigger{
+    width:80%;
+}
+
+.order .order_cont .form_cont form .bigger input{
+    width:350px; 
+}
+
+.order .order_cont .form_cont form button {
+    width: 70%;
+    background-color: rgb(105, 93, 15);
+    color: white;
+    border: none;
     border-radius: 20px;
-    padding:5px;
+    padding: 10px 20px;
+    font-size: 16px;
 }
 
 /************************************************************************************************************************************************************************/
@@ -357,6 +562,10 @@ footer .flink .fcard ul li{
 footer .flink .fcard ul li a{
     font-size: 15px;
     color: white;
+}
+
+footer .flink .fcard ul li a:hover{
+    color:rgb(105, 93, 15);
 }
 
 footer .copyright{
