@@ -179,9 +179,10 @@ header .first .first_cont .text button:hover{
 
 /***************************************************************** POPULAR DISHES *******************************************************************************************************/
 .popular{
-    height: 100vh;
+    height: 80vh;
     overflow: auto;
     background: linear-gradient(45deg, rgba(105,93,15,1) 13%, rgba(207,187,58,1) 52%, rgba(105,93,15,1) 89%);
+    padding: 10px;
 }
 
 .popular .pop_cont{
@@ -221,11 +222,12 @@ header .first .first_cont .text button:hover{
     flex-flow: row wrap;
     justify-content: start;
     margin: 0  auto;
+    padding-top: 20px;
 }
 
 .popular .pop_cont .items .item_cont{
     width: 25%;
-    padding:30px;
+    padding:10px;
 }
 
 .popular .pop_cont .items .item{
@@ -269,8 +271,8 @@ header .first .first_cont .text button:hover{
 }
 
 .popular .pop_cont .items .item img{
-    width:65%;
-    height: 75%;
+    width:75%;
+    height: 85%;
 }
 
 .popular .pop_cont .items .item .details{
@@ -300,7 +302,7 @@ header .first .first_cont .text button:hover{
     background-image: url("../images/bg.webp");
     background-size: cover;
     background-position: center;
-    padding: 10px;
+    padding: 40px;
 }
 
 .menu .overlay{
@@ -315,6 +317,7 @@ header .first .first_cont .text button:hover{
 
 .menu .menu_cont{
     position: relative;
+    height: 100%;
     width:90%;
     padding:10px;
     margin: auto;
@@ -365,15 +368,16 @@ header .first .first_cont .text button:hover{
 
 .menu .menu_cont .sushi_type ul li{
     padding: 20px;
+    transition: 0.2s all;
 }
 
 .menu .menu_cont .sushi_type ul li a{
     color: white;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .menu .menu_cont .dishes_cont{
-    height: 100%;
     width:100%;
     margin: 0 auto;
     padding:30px;
@@ -385,10 +389,15 @@ header .first .first_cont .text button:hover{
 
 .menu .menu_cont .dishes_cont .dish{
     position: relative;
-    width: 25%;
+    width: 100%;
     height: 100%;
-    margin:30px 30px;
     overflow: hidden;
+}
+
+.menu .menu_cont .dishes_cont .dish_cont{
+    width:25%;
+    height: 100%;
+    padding:20px;
 }
 
 .menu .menu_cont .dishes_cont .dish .cart button{
