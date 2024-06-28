@@ -179,16 +179,16 @@ header .first .first_cont .text button:hover{
 
 /***************************************************************** POPULAR DISHES *******************************************************************************************************/
 .popular{
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    height: 100vh;
+    overflow: auto;
     background: linear-gradient(45deg, rgba(105,93,15,1) 13%, rgba(207,187,58,1) 52%, rgba(105,93,15,1) 89%);
 }
 
 .popular .pop_cont{
     width:90%;
+    height: 100%;
     padding:10px;
-    margin:10px;
+    margin:auto;
     text-align: center;
 }
 
@@ -223,16 +223,19 @@ header .first .first_cont .text button:hover{
     margin: 0  auto;
 }
 
+.popular .pop_cont .items .item_cont{
+    width: 25%;
+    padding:30px;
+}
+
 .popular .pop_cont .items .item{
     position: relative;
     padding:25px;
-    height: 100%;
-    width:25%;
+    width:100%;
     background: rgba(105, 93, 15,0.6);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
     border-radius: 20px;
-    margin:10px 20px;
     overflow: hidden;
 }
 
