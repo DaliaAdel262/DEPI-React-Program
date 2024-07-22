@@ -1,0 +1,53 @@
+*{
+    font-family: "Poppins", sans-serif;
+}
+body{
+    background-color: var(--primary);
+}
+:root{
+    --primary:rgb(205, 57, 3);
+    --secondary: rgb(255, 196, 175);
+}
+
+:focus{
+    outline: none;
+}
+.logo h1{
+    font-size: 60px;
+}
+
+.note_title_style{
+    background-color: var(--primary);
+    font-size: 65px;
+    border: transparent;
+    color:white;
+
+}
+
+.note_title_style::placeholder{
+    color:white;
+    opacity: 0.5;
+    font-weight: 500; 
+}
+
+.note_content_style{
+    background-color: var(--primary);
+    font-size: 40px;
+    border: transparent;
+    color:white;
+}
+
+.note_content_line{
+    border-bottom: 10px white dotted;
+    opacity: 0.5;
+}
+
+.button-style{
+    background-color: transparent;
+    font-size: 30px;
+    border: transparent;
+    color:white
+}
+
+
+
