@@ -3,12 +3,9 @@ var noteContent = document.getElementById("NoteContent");
 var oldNotes = document.getElementById("table_of_notes");
 var noteList = []
 
-function getNoteContent(){
-    var note = {
-        title:noteTitle.value,
-        content:noteContent.value,
-    }
-    return note;
+if(localStorage.getItem("Notes")!=null){
+    noteList=JSON.parse(localStorage.getItem("Notes"));
+    displayNotes();
 }
 
 function clearNote(){
@@ -17,16 +14,32 @@ function clearNote(){
 }
 
 function addNote(){
-    var note_to_add = getNoteContent();
-    noteList.push(note_to_add);
+    var note = {
+        title:noteTitle.value,
+        content:noteContent.value,
+    }
+    noteList.push(note);
+    localStorage.setItem("Notes",JSON.stringify(noteList));
+    displayNotes();
     clearNote();
-
-    var box= `<tr>
-               <td>${noteList.indexOf(note_to_add)+1}</td>
-               <td>${note_to_add.title}</td>
-               <td>22/07/2024</td>
-               <td>Delete</td>
-              </tr>`
-    oldNotes.innerHTML += box 
 }
 
+function displayNotes(){
+    var box=``;
+    for(var i=0;i<noteList.length;i++){
+        box+= `<tr>
+               <td>${i+1}</td>
+               <td>${noteList[i].title}</td>
+               <td>22/07/2024</td>
+               <td><button onclick="deleteNote(${i})">Delete</button></td>
+              </tr>`
+    }
+    
+    oldNotes.innerHTML = box; 
+}
+
+function deleteNote(index){
+    noteList.splice(index,1);
+    localStorage.setItem("Notes",JSON.stringify(noteList));
+    displayNotes();
+}
